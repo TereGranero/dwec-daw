@@ -1,0 +1,31 @@
+#big2Div img {
+   height: 400px !important;
+   margin: 10px !important;
+}
+
+#contingut img {
+   height: 400px !important;
+   margin: 10px !important;
+}
+
+#big2Div img.destacat_blau {
+   border: 3px solid blue !important;
+}
+
+
+#big2Div img.destacat_verd {
+   border: 3px solid green !important;
+}
+
+.hidden {
+   display: none;
+}
+
+.visible {
+   display: block;
+}
+
+#mapDiv {
+   width: 80%; 
+   height: 500px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div style="padding: 20px; border: 1px solid black;" id="myDiv">
+      <button id="myButton">Fes clic aquí</button>
+      <input type="text" id="myInput" placeholder="Escriu alguna cosa...">
+    </div>
+
+    <script>
+      // CLIC (click event)
+      var button = document.getElementById('myButton');
+      button.addEventListener('click', function(event) {
+        console.log('--- Event Click ---');
+        console.log('Tipus d\'esdeveniment:', event.type);           // click
+        console.log('Element clicat:', event.target);               // <button>
+        console.log('Coordenades del clic:', event.clientX, event.clientY); // Posició del clic
+        event.stopPropagation();  // Evita la propagació cap al div
+      });
+
+      // MOVIMENT DEL RATOLÍ (mousemove event)
+      var div = document.getElementById('myDiv');
+      div.addEventListener('mousemove', function(event) {
+        console.log('--- Event Mousemove ---');
+        console.log('Coordenades del ratolí:', event.clientX, event.clientY); // Posició del ratolí dins la finestra
+      });
+
+      // PREMUT DE TECLA (keydown event)
+      var input = document.getElementById('myInput');
+      input.addEventListener('keydown', function(event) {
+        console.log('--- Event Keydown ---');
+        console.log('Tecla premuda:', event.key);                    // Tecla que s'ha premut
+        console.log('Codi de la tecla:', event.code);                // Codi de la tecla
+      });
+
+      // ENFOCAMENT (focus event)
+      input.addEventListener('focus', function(event) {
+        console.log('--- Event Focus ---');
+        console.log('Element enfocat:', event.target);               // Input enfocat
+      });
+
+      // SORTIDA DEL FOCUS (blur event)
+      input.addEventListener('blur', function(event) {
+        console.log('--- Event Blur ---');
+        console.log('Element que ha perdut el focus:', event.target); // Input que ha perdut el focus
+      });
+
+      // SUBMISSIÓ D'UN FORMULARI (submit event)
+      var form = document.createElement('form');
+      form.innerHTML = '<input type="text" placeholder="Nom"><button type="submit">Enviar</button>';
+      document.body.appendChild(form);
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita l'enviament del formulari
+        console.log('--- Event Submit ---');
+        console.log('Formulari enviat');
+      });
+
+      // Event a tot el div
+      div.addEventListener('click', function() {
+        console.log('--- Event Click a Div ---');
+        console.log('El div ha estat clicat');
+      });
+    </script>
+  </body>
+</html>

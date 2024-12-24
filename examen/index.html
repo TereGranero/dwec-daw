@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen SPA Bicicletes i Competicions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #buttons {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 10; /* Elevar els botons per sobre del contingut */
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #content {
+            margin-top: 80px;
+            padding-top: 50px; /* Deixem espai per assegurar que els mapes no sobrepassen els botons */
+        }
+        .bike-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .bike-image {
+            width: 100%;
+            height: auto;
+        }
+        .map-container {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet" />
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+
+<div id="buttons">
+    <button id="showBikes">Mostrar Bicis</button>
+    <button id="showCountdown">Compte enrere competicions</button>
+    <button id="showMap">Mostra ports de muntanya</button>
+    <button id="backHome">Tornar a la pàgina inicial</button>
+</div>
+
+<div id="content">
+    <img id="homeImage" src="" alt="Ciclisme Aleatori">
+</div>
+
+</body>
+</html>
+
+

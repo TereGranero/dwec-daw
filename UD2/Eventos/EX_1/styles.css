@@ -1,0 +1,77 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+/* Structure */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+#content {
+    min-height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+/* Titles */
+
+h1 {
+    margin: 20px;
+    height: 140 px;
+}
+
+
+/* Buttons */
+
+button {
+    background-color: rgba(240, 240, 240, 0.26);
+    border: 1px solid #DFDFDF;
+    border-radius: 16px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
+
+#verdolaga{
+    background-color: rgba(46, 252, 114, 0.26);
+}
+
+#proteines{
+    background-color: rgba(231, 95, 16, 0.26);
+}
+
+#aliny{
+    background-color: rgba(177, 194, 27, 0.26);
+}
+
+/* Images */
+
+img {
+    max-width: 200px;
+    max-height: 150px;
+    height: auto;
+    cursor: pointer;
+}

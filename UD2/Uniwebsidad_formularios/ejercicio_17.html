@@ -1,0 +1,60 @@
+<!-- Mejorar el ejemplo anterior indicando en todo momento al usuario el número 
+ de caracteres que aún puede escribir. Además, se debe permitir pulsar las teclas 
+ Backspace, Supr. y las flechas horizontales cuando se haya llegado al máximo 
+ número de caracteres.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ejercicio 17</title>
+<style type="text/css">
+	body {font-family: arial, helvetica;}
+	#info {width:160px; border:thin solid silver; padding:.5em; position:fixed;}
+	#info h1 {margin: 0;}
+</style>
+<script>
+
+	function muestraInformacion(mensaje) {
+		document.getElementById("info").innerHTML = '<p>'+mensaje+'</p>';
+	}
+
+	function limita(e, maximoCaracteres) {
+		var elemento = document.getElementById("texto");
+		var evento = e || window.event;
+		var tecla = evento.charCode || evento.keyCode;
+
+		const teclas_permitidas = [8, 37, 39, 46];
+
+		if (teclas_permitidas.includes(tecla)) {
+			return true;
+		}
+
+		if (elemento.value.length < maximoCaracteres) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	function actualizaInfo(maximoCaracteres){
+		var elemento = document.getElementById("texto");
+		
+		if (elemento.value.length < maximoCaracteres) {
+			info.innerHTML = "<p>Te quedan " + (maximoCaracteres - elemento.value.length) + " caracteres.</p>";
+			document.getElementById("info").innerHTML = '<p>'+mensaje+'</p>';
+		} else {
+			info.innerHTML = "<p>Has llegado al máximo de caracteres.</p>";
+		}
+	}
+
+</script>
+</head>
+<body>
+	<textarea id="texto" onkeypress="return limita(event, 100);" onkeyup="actualizaInfo(100)"></textarea>
+	<div id="info">Te quedan 100 caracteres.</div>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>

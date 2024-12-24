@@ -1,0 +1,51 @@
+<!--deshabilitar boton de envio de formulario hasta validacion-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validació de Formulari</title>
+</head>
+<body>
+  <form id="myForm">
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" name="nom" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <label for="password">Contrasenya:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <input type="submit" value="Enviar" id="submitBtn" disabled>
+  </form>
+
+  <script>
+    function validarFormulari() {
+      var nom = document.getElementById('nom').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      var nomValid = nom.length > 0;
+      var emailValid = /\S+@\S+\.\S+/.test(email);
+      var passwordValid = password.length >= 8;
+
+      // Habilitar o deshabilitar el botó de submit
+      var submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = !(nomValid && emailValid && passwordValid);
+    }
+
+    document.getElementById('nom').addEventListener('input', validarFormulari);
+    document.getElementById('email').addEventListener('input', validarFormulari);
+    document.getElementById('password').addEventListener('input', validarFormulari);
+
+    // Afegir un esdeveniment de submit al formulari per prevenir l'enviament si no està vàlid
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      if (!document.getElementById('submitBtn').disabled) {
+        alert('Formulari enviat amb èxit!');
+      }
+      event.preventDefault();
+    });
+  </script>
+</body>
+</html>

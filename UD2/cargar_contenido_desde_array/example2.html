@@ -1,0 +1,40 @@
+<!--Tenemos información de usuarios en un array y queremos
+pintarla en una tabla al pulsar un boton.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var usuaris=[{nom: "Mortadelo", edat: 50}, {nom: "Filemón", edat: 53}];
+
+        function creaTaula(){
+            let cadenaHTML = "<table>" + creaCabecera() + creaCos(usuaris) + "</table>";
+            console.log(cadenaHTML);
+            document.getElementById("boto").innerHTML=cadenaHTML;
+        }
+
+        function creaCabecera(){
+            let cadenaHTML="<tr><th>Nom</th><th>Edat</th></tr>";
+            return cadenaHTML;
+        }
+
+        function creaCos(arrayUsuaris){
+            let cadenaHTML="";
+            arrayUsuaris.forEach(element => {
+                cadenaHTML+="<tr><td>" + element.nom + "</td><td>" + element.edat + "<td></tr>";
+            });
+            return cadenaHTML;
+        }
+
+        window.onload = ()=> {
+            document.getElementById("boto").onclick = creaTaula;
+        }
+    </script>
+</head>
+<body>
+    <button id="boto">Carrega usuaris</button>
+</body>
+</html>

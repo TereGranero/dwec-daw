@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form>
+    <label for="nom">Nom (mínim 3 caràcters):</label>
+    <input type="text" id="nom" name="nom" required minlength="3" />
+
+    <label for="email">Correu electrònic:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="edat">Edat (entre 18 i 65 anys):</label>
+    <input type="number" id="edat" name="edat" required min="18" max="65" />
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>

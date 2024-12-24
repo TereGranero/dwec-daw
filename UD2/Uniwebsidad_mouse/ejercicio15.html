@@ -1,0 +1,88 @@
+<!-- https://uniwebsidad.com/libros/javascript/capitulo-6/obteniendo-informacion-del-evento-objeto-event
+Al mover el ratón en cualquier punto de la ventana del navegador, se muestre la posición del puntero 
+respecto del navegador y respecto de la página:
+Navegador [326,432], Página [326,88]
+Para mostrar los mensajes, utilizar la función muestraInformacion() deduciendo su funcionamiento a partir de su código fuente.
+
+Al pulsar cualquier tecla, el mensaje mostrado debe cambiar para indicar el nuevo evento y su información asociada:
+Carácter [a], Código [97]
+
+Cuando se pulsa un botón del ratón, 
+el color de fondo del cuadro de mensaje debe ser amarillo (#FFFFCC) 
+y cuando se pulsa una tecla, el color de fondo debe ser azul (#CCE6FF). 
+Al volver a mover el ratón, el color de fondo vuelve a ser blanco.
+Al mover el ratón en cualquier punto de la ventana del navegador, 
+se muestre la posición del puntero respecto del navegador y respecto de la página:
+Ratón: Navegador [606, 457] Página [606,113]
+Teclado: Carácter [c] Código [99]
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 15 - Informaci�n sobre eventos</title>
+<style type="text/css">
+	body {font-family: arial, helvetica;}
+	#info {width:160px; border:thin solid silver; padding:.5em; position:fixed;}
+	#info h1 {margin: 0;}
+</style>
+<script>
+	function muestraInformacion(mensaje) {
+		document.getElementById("info").innerHTML = '<h1>'+mensaje[0]+'</h1>';
+		for(var i=1; i<mensaje.length; i++) {
+			document.getElementById("info").innerHTML += '<p>'+mensaje[i]+'</p>';
+		}
+	}
+
+
+	function informacion(e) {
+		var evento = e || window.event;
+		switch (evento.type) {
+			case 'mousemove':
+				document.getElementById('info').style.backgroundColor = '#FFFFFF';
+				var ie = navigator.userAgent.toLowerCase().indexOf('msie')!=-1;
+				var coordenadaXrelativa, coordenadaYrelativa, coordenadaXabsoluta, coordenadaYabsoluta;
+				if(ie) {
+				if(document.documentElement && document.documentElement.scrollTop){
+					coordenadaXabsoluta = evento.clientX + document.documentElement.scrollLeft;
+					coordenadaYabsoluta = evento.clientY + document.documentElement.scrollTop;
+				}
+				else {
+					coordenadaXabsoluta = evento.clientX + document.body.scrollLeft;
+					coordenadaYabsoluta = evento.clientY + document.body.scrollTop;
+				}
+				}
+				else {
+				coordenadaXabsoluta = evento.pageX;
+				coordenadaYabsoluta = evento.pageY;
+				}
+				coordenadaXrelativa = evento.clientX;
+				coordenadaYrelativa = evento.clientY;
+				muestraInformacion(['Ratón', 'Navegador ['+coordenadaXrelativa+', '+coordenadaYrelativa+']', 'Pagina ['+coordenadaXabsoluta+', '+coordenadaYabsoluta+']']);
+				break;
+
+			case 'keypress':
+				document.getElementById('info').style.backgroundColor = '#CCE6FF';
+				var codigo = e.charCode || e.keyCode;
+				var caracter = String.fromCharCode(e.keyCode);
+				muestraInformacion(['Teclado', 'Carácter [' + caracter + ']', 'Código [' + codigo +']']);
+				break;
+
+			case 'click':
+				document.getElementById('info').style.backgroundColor = '#FFFFCC';
+				break;
+		}
+	}
+
+	document.addEventListener("mousemove", informacion);
+	document.addEventListener("keypress", informacion);
+	document.addEventListener("click", informacion);
+</script>
+</head>
+<body>
+<div id="info"></div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>

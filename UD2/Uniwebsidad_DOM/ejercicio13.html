@@ -1,0 +1,30 @@
+/<!--Se añadan nuevos elementos a la lista cada vez que se pulsa sobre el botón. 
+Utilizar las funciones DOM para crear nuevos nodos y añadirlos a la lista existente-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 13 - DOM b�sico y atributos XHTML</title>
+<script type="c1c6d41b661c8c08607c96f2-text/javascript">
+    function anade() {
+        var lista = document.getElementsbyId("lista");
+
+        var elemento = document.createElement("li");
+        var contenido = document.createTextNode("nuevo elemento");
+        elemento.appendChild(contenido);
+        lista.appendChild(elemento);
+    }
+</script>
+</head>
+<body>
+<ul id="lista">
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetuer adipiscing elit</li>
+<li>Sed mattis enim vitae orci</li>
+<li>Phasellus libero</li>
+<li>Maecenas nisl arcu</li>
+</ul>
+<input type="button" value="A�adir elemento" onclick="if (!window.__cfRLUnblockHandlers) return false; anade();" data-cf-modified-c1c6d41b661c8c08607c96f2->
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="c1c6d41b661c8c08607c96f2-|49" defer></script></body>
+</html>
