@@ -1,4 +1,4 @@
-# gestor-cursos
+# 6_gestor_cursos
 
 ## Project setup
 ```

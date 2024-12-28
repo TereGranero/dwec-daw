@@ -1,0 +1,22 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "name": "HTML i CSS",
+      "duration": "200 hores",
+      "level": "Intermedi"
+    },
+    {
+      "id": "4",
+      "name": "PHP4",
+      "duration": "2h",
+      "level": "Principiant"
+    },
+    {
+      "id": "5",
+      "name": "Javascript",
+      "duration": "60 hores",
+      "level": "Avançat"
+    }
+  ]
+}

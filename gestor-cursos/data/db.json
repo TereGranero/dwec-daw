@@ -1,6 +1,0 @@
-{
-    "courses": [
-      { "id": 1, "name": "HTML i CSS", "duration": "10 hores", "level": "Principiant" },
-      { "id": 2, "name": "JavaScript Avançat", "duration": "15 hores", "level": "Intermedi" }
-    ]
-  }

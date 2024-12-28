@@ -59,10 +59,10 @@ export default {
         id = this.personas[this.personas.length - 1].id + 1;
       }
 
-      this.personas = [...this.personas, {...persona, id}];
+      this.personas = [...this.personas, {...persona, id}]; // Add object to array of object to avoid nesting
     },
     eliminarPersona(id) {
-      this.personas = this.personas.filter(
+      this.personas = this.personas.filter(  // those which fullfill condition remain
         persona => persona.id !== id
       );
     },

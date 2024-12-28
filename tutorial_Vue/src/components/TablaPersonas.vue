@@ -49,11 +49,12 @@ export default {
   data() {
     return {
       editando: null,
+      personaEditada: null
     }
   },
   methods: {
     editarPersona(persona) {
-      this.personaEditada = Object.assign({}, persona);
+      this.personaEditada = Object.assign({}, persona); // Save original in case cancel edition
       this.editando = persona.id;
     },
     guardarPersona(persona) {
