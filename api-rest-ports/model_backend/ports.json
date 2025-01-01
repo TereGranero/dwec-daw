@@ -1,0 +1,136 @@
+{
+  "ports": [
+    {
+      "id": 1,
+      "nombre": "Col du Tourmalet",
+      "altura_metros": 2115,
+      "categoria": "HC",
+      "ubicacion": "Pirineos",
+      "etapas_destacadas": [
+        "Tour de France Etapa 7",
+        "Tour de France Etapa 14",
+        "Tour de France Etapa 19"
+      ],
+      "descripcion": "Uno de los puertos más icónicos del Tour de Francia, con vistas impresionantes y desafíos para los ciclistas."
+    },
+    {
+      "id": 2,
+      "nombre": "Alpe d'Huez",
+      "altura_metros": 1850,
+      "categoria": "HC",
+      "ubicacion": "Alpes",
+      "etapas_destacadas": [
+        "Tour de France Etapa 12",
+        "Tour de France Etapa 18"
+      ],
+      "descripcion": "Famoso por sus 21 curvas, es uno de los puertos más emblemáticos del ciclismo."
+    },
+    {
+      "id": 3,
+      "nombre": "Puerto del Angliru",
+      "altura_metros": 1570,
+      "categoria": "Especial",
+      "ubicacion": "Asturias",
+      "etapas_destacadas": [
+        "Vuelta a España Etapa 15",
+        "Vuelta a España Etapa 20"
+      ],
+      "descripcion": "Con pendientes pronunciadas, es un puerto desafiante en la Vuelta a España con impresionantes vistas."
+    },
+    {
+      "id": 4,
+      "nombre": "Passo dello Stelvio",
+      "altura_metros": 2758,
+      "categoria": "Cima Coppi",
+      "ubicacion": "Alpes Orientales",
+      "etapas_destacadas": [
+        "Giro d'Italia Etapa 16",
+        "Giro d'Italia Etapa 20"
+      ],
+      "descripcion": "Uno de los puertos más altos y desafiantes del Giro d'Italia, con paisajes espectaculares."
+    },
+    {
+      "id": 5,
+      "nombre": "Mont Ventoux",
+      "altura_metros": 1912,
+      "categoria": "HC",
+      "ubicacion": "Provenza",
+      "etapas_destacadas": [
+        "Tour de France Etapa 11",
+        "Tour de France Etapa 15"
+      ],
+      "descripcion": "Conocido como el 'Gigante de Provenza', ofrece una ascensión legendaria en el Tour de Francia."
+    },
+    {
+      "id": 6,
+      "nombre": "Col de la Croix-de-Fer",
+      "altura_metros": 2067,
+      "categoria": "HC",
+      "ubicacion": "Alpes",
+      "etapas_destacadas": [
+        "Tour de France Etapa 14",
+        "Tour de France Etapa 17"
+      ],
+      "descripcion": "Un puerto de alta montaña con paisajes impresionantes en el corazón de los Alpes franceses."
+    },
+    {
+      "id": 7,
+      "nombre": "Zoncolan",
+      "altura_metros": 1730,
+      "categoria": "Especial",
+      "ubicacion": "Dolomitas",
+      "etapas_destacadas": [
+        "Giro d'Italia Etapa 14",
+        "Giro d'Italia Etapa 20"
+      ],
+      "descripcion": "Con pendientes extremas, es uno de los puertos más temidos en el Giro d'Italia."
+    },
+    {
+      "id": 8,
+      "nombre": "Port de Pailhères",
+      "altura_metros": 2001,
+      "categoria": "HC",
+      "ubicacion": "Pirineos",
+      "etapas_destacadas": [
+        "Tour de France Etapa 8",
+        "Tour de France Etapa 14"
+      ],
+      "descripcion": "Un puerto desafiante en los Pirineos con una ascensión desde Ax-les-Thermes."
+    },
+    {
+      "id": 9,
+      "nombre": "Colle delle Finestre",
+      "altura_metros": 2178,
+      "categoria": "Cima Coppi",
+      "ubicacion": "Alpes Cottienses",
+      "etapas_destacadas": [
+        "Giro d'Italia Etapa 20"
+      ],
+      "descripcion": "Famoso por su carretera de tierra en la parte superior, es un puerto emblemático en el Giro d'Italia."
+    },
+    {
+      "id": 10,
+      "nombre": "Col du Galibier",
+      "altura_metros": 2642,
+      "categoria": "HC",
+      "ubicacion": "Alpes",
+      "etapas_destacadas": [
+        "Tour de France Etapa 17",
+        "Tour de France Etapa 18"
+      ],
+      "descripcion": "Uno de los puertos más altos y desafiantes de los Alpes franceses, con espectaculares vistas alpinas."
+    },
+    {
+      "id": 822987,
+      "nombre": "Barx",
+      "altura_metros": 355,
+      "categoria": "3",
+      "ubicacion": "La Valldigna",
+      "etapas_destacadas": [
+        "Etapes 2 i 5",
+        "Etapes 2 i 5 i altres"
+      ],
+      "descripcion": "Port facilet per a entrenar"
+    }
+  ]
+}

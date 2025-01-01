@@ -8,6 +8,8 @@ npm install
 ### Compiles and hot-reloads for development
 ```
 npm run serve
+
+json-server --watch data/db.json --port 3000
 ```
 
 ### Compiles and minifies for production
