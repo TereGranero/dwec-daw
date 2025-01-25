@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <h1>Edita/Crea port</h1>
         <div class="container mt-3">
             <h2>Formulari per Emplenar Elements</h2>
@@ -58,7 +57,6 @@ export default {
                 descripcion: ""
             },
             portCreatCorrecte : false,
-
         };
     },
 

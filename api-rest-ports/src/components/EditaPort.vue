@@ -68,7 +68,7 @@ export default {
         afegirElement() {
             // Aquí pots fer el que vulguis amb les dades introduïdes (per exemple, afegir-les a una llista)
             console.log("Element afegit:", this.nouElement);
-            //this.nouElement.id = Math.floor(Math.random() * 1000000);
+
             this.nouElement.id = this.id;
             this.nouElement.etapas_destacadas.push(this.etapas);
             this.putPort(this.nouElement);

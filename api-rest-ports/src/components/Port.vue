@@ -43,7 +43,6 @@ export default {
                 "etapas_destacadas": [],
                 "descripcion": "Uno de los puertos más icónicos del Tour de Francia, con vistas impresionantes y desafíos para los ciclistas."
             },
-
         };
     },
 

@@ -4,8 +4,8 @@
        v-for="course in courses"
        :key="course.id"
        :course="course"
-       @edit=this.editCourse(course.id)
-       @delete=this.deleteCourse(course.id)
+       @edit="editCourse" 
+       @delete="deleteCourse"
      />
    </div>
  </template>
@@ -20,7 +20,7 @@
    },
    methods: {
      editCourse(id) {
-       this.$router.push({name: 'EditCourse', params: {id: id}});
+       this.$router.push({name: 'EditCourse', params: { id }});
      },
      deleteCourse(id) {
        this.$emit('delete', id);
@@ -30,5 +30,4 @@
  </script>
 
 <style>
-
 </style>
